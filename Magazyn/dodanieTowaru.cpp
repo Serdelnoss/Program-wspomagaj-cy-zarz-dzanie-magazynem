@@ -27,6 +27,7 @@ int sprawdzIleRegalow() {
 
 void komunikatDodaniaTowaru(bool czyPoprawne) {
     if(czyPoprawne == true) {
+        cout<<"Towar poprawnie dodany."<<endl;
         remove("regaly.txt");
         rename("regaly1.txt", "regaly.txt");
     } else {
@@ -61,6 +62,7 @@ bool zapisDoPlikuRegalow(fstream &plik, fstream &plikZapis, string regal, string
         nrLinii++;
     }
     plikZapis.close();
+    plik.close();
     return czyPoprawne;
 }
 
@@ -76,7 +78,6 @@ bool zmienPlikZRegalami(string ilosc, string regal) {
             cerr<<"B³¹d otwarcia pliku z rega³ami."<<endl;
             czyPoprawne = false;
         }
-        plik.close();
     } else {
         cerr<<"B³¹d otwarcia pliku z rega³ami."<<endl;
         czyPoprawne = false;
@@ -116,6 +117,23 @@ void zapisDoPlikuTowarow(string nazwa, string ilosc, string regal) {
     }
 }
 
+int sprawdzIleMiejscNaRegale(int doKtoregoRegalu) {
+    fstream plik;
+    plik.open("regaly.txt");
+    if(plik.is_open()) {
+        string linia;
+        int nrLinii = 1;
+        while(getline(plik, linia)) {
+            if(nrLinii == doKtoregoRegalu) {
+                return atoi(linia.c_str());
+            }
+        }
+        plik.close();
+    } else {
+        cerr<<"Blad otwarcia pliku z regalami!"<<endl;
+    }
+}
+
 void dodanieTowaru() {
     string nazwa;
     string ilosc;
@@ -126,7 +144,8 @@ void dodanieTowaru() {
     if(sprawdzPoprawnoscWpisanejLiczby(ilosc)) {
         informacjeORegalach();
         cout<<endl<<"Do ktorego rega³u dodac towar: "; cin>>doKtoregoRegalu;
-        if(sprawdzPoprawnoscWpisanejLiczby(doKtoregoRegalu) && atoi(doKtoregoRegalu.c_str()) <= sprawdzIleRegalow()) {
+        if(sprawdzPoprawnoscWpisanejLiczby(doKtoregoRegalu) && atoi(doKtoregoRegalu.c_str()) <= sprawdzIleRegalow() &&
+           atoi(ilosc.c_str()) <= sprawdzIleMiejscNaRegale(atoi(doKtoregoRegalu.c_str()))) {
             zapisDoPlikuTowarow(nazwa, ilosc, doKtoregoRegalu);
         } else cout<<"B³¹d wprowadzonych danych."<<endl;
     } else cout<<"B³¹d wprowadzonych danych."<<endl;

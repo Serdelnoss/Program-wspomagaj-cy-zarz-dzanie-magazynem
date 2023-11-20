@@ -7,7 +7,6 @@ using namespace std;
 void komunikat();
 
 bool sprawdzPoprawnoscWpisanejLiczby(string liczba) {
-    bool czyPoprawne;
      for(int i = 0; i < liczba.length(); i++) {
         if(liczba[i] < '1' || liczba[i] > '9') return false;
         return true;
