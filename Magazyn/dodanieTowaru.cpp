@@ -124,8 +124,7 @@ int sprawdzIleMiejscNaRegale(int doKtoregoRegalu) {
         string linia;
         int nrLinii = 1;
         while(getline(plik, linia)) {
-            if(nrLinii == doKtoregoRegalu) {
-                cout<<linia<<endl;
+            if(nrLinii == doKtoregoRegalu + 2) {
                 return atoi(linia.c_str());
             }
             nrLinii++;
@@ -147,7 +146,7 @@ void dodanieTowaru() {
         informacjeORegalach();
         cout<<endl<<"Do ktorego rega³u dodac towar: "; cin>>doKtoregoRegalu;
         if(sprawdzPoprawnoscWpisanejLiczby(doKtoregoRegalu) && atoi(doKtoregoRegalu.c_str()) <= sprawdzIleRegalow() &&
-           atoi(ilosc.c_str()) <= sprawdzIleMiejscNaRegale(atoi(ilosc.c_str()))) {
+           atoi(ilosc.c_str()) <= sprawdzIleMiejscNaRegale(atoi(doKtoregoRegalu.c_str()))) {
             zapisDoPlikuTowarow(nazwa, ilosc, doKtoregoRegalu);
         } else cout<<"B³¹d wprowadzonych danych."<<endl;
     } else cout<<"B³¹d wprowadzonych danych."<<endl;
