@@ -47,14 +47,17 @@ void polecenie(char wybor) {
     }
 }
 
-void init() {
-    char wybor = '1';
-    while(wybor != '4') {
-        cout<<"Wybierz dzia³anie wybieraj¹c odpowieni¹ cyfrê:"<<endl;
+void wypiszPolecenia() {
+    cout<<"Wybierz dzia³anie wybieraj¹c odpowieni¹ cyfrê:"<<endl;
         cout<<"1: Sk³adanie zamówienia."<<endl;
         cout<<"2: Odbiór zamówienia."<<endl;
         cout<<"3: Logowanie (dla pracowników magazynu)"<<endl;
         cout<<"4: Koniec programu."<<endl;
+}
+
+char wybor() {
+    char wybor = '1';
+    while(wybor != '4') {
         cin>>wybor;
         while(wybor < '1' || wybor > '4') {
             cout<<"Nie znaleziono takiego polecenia."<<endl;
@@ -62,5 +65,6 @@ void init() {
         }
         system("cls");
         polecenie(wybor);
+        wypiszPolecenia();
     }
 }

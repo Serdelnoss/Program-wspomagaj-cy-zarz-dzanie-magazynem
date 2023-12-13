@@ -17,11 +17,15 @@
 
 using namespace std;
 
-void init();
+void polecenie(char wybor);
+void wypiszPolecenia();
+char wybor();
 
 int main()
 {
     system("chcp 1250>>null");
-    init();
+    wypiszPolecenia();
+    char wybranePolecenie = wybor();
+    polecenie(wybranePolecenie);
     return 0;
 }

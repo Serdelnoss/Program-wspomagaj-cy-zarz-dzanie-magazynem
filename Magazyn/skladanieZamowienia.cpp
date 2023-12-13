@@ -185,7 +185,7 @@ bool sprawdzPoprawnoscWpisanejLiczby(string liczba);
 
 void skladanieZamowienia() {
     system("cls");
-    cout<<"Dostêpne towary: "<<endl;
+    std::cout<<"Dostêpne towary: "<<std::endl;
     informacjeOTowarach();
     zamowienie z = wczytajDane();
     int iloscTowarow = zliczIloscTowarow();
@@ -196,9 +196,9 @@ void skladanieZamowienia() {
                     zapisDoPlikuZamowien(z);
                     zdejmijTowarZRegalu(z);
                     zdejmijTowarZTowarow(z);
-                } else  cout<<"Niepoprawny numer telefonu."<<endl;
-            } else cout<<"Zamówienie nie powiod³o siê - niewystarczaj¹ca iloœæ towaru w magazynie."<<endl;
-        } else cout<<"Nie znaleziono towaru. Program zakonczy dzialanie."<<endl;
-    } else cout<<"Wprowadzone dane s¹ nieprawid³owe. Program zakonczy dzialanie."<<endl;
+                } else  std::cout<<"Niepoprawny numer telefonu."<<std::endl;
+            } else std::cout<<"Zamówienie nie powiod³o siê - niewystarczaj¹ca iloœæ towaru w magazynie."<<std::endl;
+        } else std::cout<<"Nie znaleziono towaru. Program zakonczy dzialanie."<<std::endl;
+    } else std::cout<<"Wprowadzone dane s¹ nieprawid³owe. Program zakonczy dzialanie."<<std::endl;
     komunikat();
 }

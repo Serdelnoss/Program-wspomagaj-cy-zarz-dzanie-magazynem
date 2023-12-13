@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1700388464 source:c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\main.cpp
+1701450603 source:c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\main.cpp
 	<iostream>
 	"init.cpp"
 	"wyswietlenieInformacji.cpp"
@@ -27,7 +27,7 @@
 1699531792 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\lib\wyborpolecenia.cpp
 	<iostream>
 
-1700493109 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\init.cpp
+1701451024 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\init.cpp
 	<iostream>
 
 1700340096 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\wyborpolecenia.cpp
@@ -36,7 +36,7 @@
 1699532338 source:c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\wyborpolecenia.cpp
 	<iostream>
 
-1700395705 source:c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\skladaniezamowienia.cpp
+1701523104 source:c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\skladaniezamowienia.cpp
 	<iostream>
 	<fstream>
 	<conio.h>
@@ -77,7 +77,7 @@
 	<iostream>
 	<fstream>
 
-1700516218 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\dodanietowaru.cpp
+1700516252 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\dodanietowaru.cpp
 	<iostream>
 	<fstream>
 	<conio.h>
@@ -103,7 +103,7 @@
 	<fstream>
 	<cstring>
 
-1700339112 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\dodaniepracownika.cpp
+1701530507 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\dodaniepracownika.cpp
 	<iostream>
 	<fstream>
 

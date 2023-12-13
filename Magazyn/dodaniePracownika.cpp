@@ -22,7 +22,7 @@ using namespace dodawaniePracownika;
 void dodaniePracownika() {
     pracownik p;
     cin.ignore();
-    cout<<"Podaj login pracownika: "; cin.getline(p.login, 20, '\n');
-    cout<<"Podaj has³o pracownika: "; cin.getline(p.haslo, 30, '\n');
+    std::cout<<"Podaj login pracownika: "; std::cin.getline(p.login, 20, '\n');
+    std::cout<<"Podaj has³o pracownika: "; std::cin.getline(p.haslo, 30, '\n');
     zapisDoPlikuPracownikow(p);
 }
