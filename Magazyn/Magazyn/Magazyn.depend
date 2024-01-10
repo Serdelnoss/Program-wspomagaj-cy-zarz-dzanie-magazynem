@@ -1,0 +1,122 @@
+# depslib dependency file v1.0
+1701450603 source:c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\main.cpp
+	<iostream>
+	"init.cpp"
+	"wyswietlenieInformacji.cpp"
+	"informacjeORegalach.cpp"
+	"informacjeOTowarach.cpp"
+	"informacjeOZamowieniach.cpp"
+	"wyborPolecenia.cpp"
+	"dodanieRegalu.cpp"
+	"usuniecieRegalu.cpp"
+	"usuniecieTowaru.cpp"
+	"dodanieTowaru.cpp"
+	"dodaniePracownika.cpp"
+	"logowanie.cpp"
+	"pokazaniePracownikow.cpp"
+	"usunieciePracownika.cpp"
+	"odbiorZamowienia.cpp"
+
+1699531808 source:c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\lib\init.cpp
+	<iostream>
+	"wyborPolecenia.cpp"
+
+1699531792 source:c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\lib\wyborpolecenia.cpp
+	<iostream>
+
+1699531792 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\lib\wyborpolecenia.cpp
+	<iostream>
+
+1704140170 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\init.cpp
+	<iostream>
+
+1700340096 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\wyborpolecenia.cpp
+	<iostream>
+
+1699532338 source:c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\wyborpolecenia.cpp
+	<iostream>
+
+1701523104 source:c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\skladaniezamowienia.cpp
+	<iostream>
+	<fstream>
+	<conio.h>
+	<cstdlib>
+	<ctime>
+
+1699564086 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\dodaniepolki.cpp
+	<iostream>
+	<fstream>
+	<conio.h>
+
+1699533499 source:c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\dodaniepolki.cpp
+	<iostream>
+	<fstream>
+
+1699541789 source:c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\usunieciepolki.cpp
+	<iostream>
+
+1700340096 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\wyswietlenieinformacji.cpp
+	<iostream>
+	<conio.h>
+
+1699564086 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\informacjeopolkach.cpp
+	<iostream>
+	<fstream>
+	<conio.h>
+
+1700339372 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\informacjeoregalach.cpp
+	<iostream>
+	<fstream>
+
+1700507891 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\dodanieregalu.cpp
+	<iostream>
+	<fstream>
+	<conio.h>
+
+1704140282 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\usuniecieregalu.cpp
+	<iostream>
+	<fstream>
+
+1700516252 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\dodanietowaru.cpp
+	<iostream>
+	<fstream>
+	<conio.h>
+
+1700341704 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\informacjeotowarach.cpp
+	<iostream>
+	<fstream>
+
+1700340096 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\usuniecietowaru.cpp
+	<iostream>
+	<fstream>
+
+1700231397 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\usunieciezamowienia.cpp
+	<iostream>
+	<fstream>
+
+1700339372 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\informacjeozamowieniach.cpp
+	<iostream>
+	<fstream>
+
+1703757688 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\logowanie.cpp
+	<iostream>
+	<fstream>
+	<cstring>
+
+1701530507 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\dodaniepracownika.cpp
+	<iostream>
+	<fstream>
+
+1700340096 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\pokazaniepracownikow.cpp
+	<iostream>
+	<fstream>
+	<conio.h>
+
+1700340096 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\usunieciepracownika.cpp
+	<iostream>
+	<fstream>
+
+1700340096 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\odbiorzamowienia.cpp
+	<iostream>
+	<fstream>
+
