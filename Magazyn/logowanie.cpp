@@ -34,16 +34,15 @@ void komunikat();
 
 void zaloguj() {
     daneLogowania dl;
-    cin.ignore();
-    cout<<"Podaj login: ";
-    cin.getline(dl.login, 20, '\n');
-    cout<<"Podaj has這: ";
-    cin.getline(dl.haslo, 30, '\n');
+    std::cin.ignore();
+    std::cout<<"Podaj login: ";
+    std::cin.getline(dl.login, 20, '\n');
+    std::cout<<"Podaj has這: ";
+    std::cin.getline(dl.haslo, 30, '\n');
     if(czyPoprawneDane(dl.login, dl. haslo)) {
-        system("cls");
         wyborDzialaniaPoZalogowaniu();
     } else {
-        cout<<"Niepoprawny login lub has這"<<endl;
+        std::cout<<"Niepoprawny login lub has這"<<std::endl;
         komunikat();
     }
 }

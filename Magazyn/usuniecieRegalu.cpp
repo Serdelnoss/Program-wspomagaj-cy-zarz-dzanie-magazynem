@@ -7,6 +7,55 @@ void informacjeORegalach();
 void komunikat();
 bool sprawdzPoprawnoscWpisanejLiczby(string liczba);
 
+struct regal {
+    string nr;
+    string nazwa;
+    string ileWolnychMiejsc;
+    string ileMaksymalnieMiejsc;
+};
+
+int ileRegalow() {
+    fstream plik;
+    plik.open("regaly.txt", ios::in);
+    int ileRegalow = 0;
+    if(plik.is_open()) {
+        string linia;
+        while(getline(plik, linia)) {
+            ileRegalow++;
+        }
+        return ileRegalow;
+    } else {
+        cerr<<"Blad otwarcia pliku z regalami."<<endl;
+        return 0;
+    }
+}
+
+regal *zczytanieRegalow() {
+    int iloscRegalow = ileRegalow() / 4;
+    regal *r = new regal[iloscRegalow];
+    fstream plik;
+    plik.open("regaly.txt");
+    if(plik.is_open()) {
+        string linia;
+        int nrLinii = 1;
+        int index = 0;
+        while(getline(plik, linia)) {
+            if(nrLinii % 4 == 1) r[index].nr = linia;
+            if(nrLinii % 4 == 2) r[index].nazwa = linia;
+            if(nrLinii % 4 == 3) r[index].ileWolnychMiejsc = linia;
+            if(nrLinii % 4 == 0) {
+                r[index].ileMaksymalnieMiejsc = linia;
+                index++;
+            }
+            nrLinii++;
+        }
+        plik.close();
+        return r;
+    } else {
+        cerr<<"Blad otwarcia pliku z regalami."<<endl;
+    }
+}
+
 bool sprawdzenieCzyRegalJestPusty(int indeks) {
     fstream plik;
     plik.open("regaly.txt", ios::in);
@@ -32,23 +81,26 @@ bool sprawdzenieCzyRegalJestPusty(int indeks) {
     } else return true;
 }
 
-void zapisDoRegalow(fstream &plikOdczyt, fstream &plikZapis, string linia, int nrLinii, bool usunieta, int wybor) {
-    plikZapis.open("regaly1.txt", ios::out);
-    while(getline(plikOdczyt, linia)) {
-        if(usunieta && nrLinii % 4 == 1) {
-            int liczba = atoi(linia.c_str()) - 1;
-            linia = to_string(liczba);
-        }
-        if(nrLinii != wybor && nrLinii != wybor +1 && nrLinii != wybor + 2 && nrLinii != wybor + 3) {
-            plikZapis<<linia<<endl;
-            usunieta = true;
-        }
-        nrLinii++;
+void zapisRegalowDoPliku(regal *r, int wybor) {
+    if(sprawdzenieCzyRegalJestPusty(wybor)) {
+         fstream plikZapis;
+        plikZapis.open("regaly1.txt", ios::out);
+        if(plikZapis.is_open()) {
+            int ileJestRegalow = ileRegalow() / 4;
+            for(int i = 0; i < ileJestRegalow; i++) {
+                if(i != wybor - 1) {
+                    plikZapis<<r[i].nr<<endl<<r[i].nazwa<<endl<<r[i].ileWolnychMiejsc<<endl<<r[i].ileMaksymalnieMiejsc<<endl;
+                }
+            }
+            plikZapis.close();
+            remove("regaly.txt");
+            rename("regaly1.txt", "regaly.txt");
+        } else cerr<<"Blad otwarcia pliku."<<endl;
+    } else {
+        cout<<"Regal nie jest pusty, nie mozna go usunac."<<endl;
+        cout<<"Wcisnij dowolny przycisk, aby kontynuowac."<<endl;
+        getch();
     }
-    plikOdczyt.close();
-    plikZapis.close();
-    remove("regaly.txt");
-    rename("regaly1.txt", "regaly.txt");
 }
 
 void usuniecieRegalu() {
@@ -57,20 +109,9 @@ void usuniecieRegalu() {
     cout<<endl<<"Który rega³ usun¹c: ";
     cin>>wybor;
     if(sprawdzPoprawnoscWpisanejLiczby(wybor)) {
-        fstream plikOdczyt, plikZapis;
-        plikOdczyt.open("regaly.txt", ios::in);
-        if(plikOdczyt.is_open()) {
-            string linia;
-            int nrLinii = 1;
-            cout<<endl;
-            bool usunieta = false;
-            if(sprawdzenieCzyRegalJestPusty(atoi(wybor.c_str()))) {
-                zapisDoRegalow(plikOdczyt, plikZapis, linia, nrLinii, usunieta, atoi(wybor.c_str()));
-            } else cout<<"Rega³ nie jest pusty. Nie uda³o siê go usun¹æ."<<endl;
-            cout<<"Wciœnij dowolny przycisk, aby kontynuowaæ..."<<endl;
-            getch();
-            system("cls");
-        } else cerr<<"B³¹d otwarcia pliku z rega³ami."<<endl;
+        regal *r = zczytanieRegalow();
+        zapisRegalowDoPliku(r, stoi(wybor));
+        delete [] r;
     } else {
         cout<<"Niepoprawnie wprowadzone dane."<<endl;
         komunikat();

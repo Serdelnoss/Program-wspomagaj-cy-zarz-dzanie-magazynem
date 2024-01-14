@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1701450603 source:c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\main.cpp
+1705091407 source:c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\main.cpp
 	<iostream>
 	"init.cpp"
 	"wyswietlenieInformacji.cpp"
@@ -27,7 +27,7 @@
 1699531792 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\lib\wyborpolecenia.cpp
 	<iostream>
 
-1701451024 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\init.cpp
+1705091493 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\init.cpp
 	<iostream>
 
 1700340096 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\wyborpolecenia.cpp
@@ -68,12 +68,12 @@
 	<iostream>
 	<fstream>
 
-1700507891 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\dodanieregalu.cpp
+1704969674 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\dodanieregalu.cpp
 	<iostream>
 	<fstream>
 	<conio.h>
 
-1700340165 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\usuniecieregalu.cpp
+1704140282 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\usuniecieregalu.cpp
 	<iostream>
 	<fstream>
 
@@ -98,7 +98,7 @@
 	<iostream>
 	<fstream>
 
-1700493284 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\logowanie.cpp
+1703757688 c:\users\macie\desktop\studia\i semestr\programy\codeblocks\projekt na semestr - magazyn\magazyn\logowanie.cpp
 	<iostream>
 	<fstream>
 	<cstring>
